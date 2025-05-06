@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'resource',
     'django_filters',
     'rest_framework_simplejwt.token_blacklist',
+    'corsheaders',
 ]
 
 
@@ -74,6 +75,7 @@ CHANNEL_LAYERS = {
     },
 }
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -183,3 +185,5 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # Vite's default dev server
     "https://study-buddy-plum.vercel.app",  # Your deployed frontend
 ]
+
+CORS_ALLOW_CREDENTIALS = True  # Allow cookies to be included in CORS requests
