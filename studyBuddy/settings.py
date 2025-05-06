@@ -177,3 +177,9 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'ashenafimulugeta016@gmail.com'  
 EMAIL_HOST_PASSWORD = 'rupu bits xdrn lwxi'  
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+# Add CORS_ALLOWED_ORIGINS to allow requests from the frontend
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",  # Vite's default dev server
+    "https://study-buddy-plum.vercel.app",  # Your deployed frontend
+]
